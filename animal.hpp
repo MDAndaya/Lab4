@@ -2,7 +2,6 @@
 // Created by MDand on 2019-10-09.
 //
 
-
 #include <ostream>
 
 #ifndef LAB4_ANIMAL_HPP
@@ -15,24 +14,27 @@ using namespace std;
 class Animal {
 
 private:
-
+    int age;
+    int long id;
 
 public:
 
-    int age;
-    static int long id;
+    static long idcounter;
+
     bool alive;
-    double location[2];
+    double locationx;
+    double locationy;
+    double height = 0;
 
     // Constructors
     Animal();
-    Animal(int age, double xcoord, double ycoord);
+    Animal(int age = 0, double xcoord = 0, double ycoord = 0);
 
     // Move
     virtual void move(double xcoord, double ycoord);
 
     // Copy constructor
-    Animal(const Animal& a);
+    Animal(const Animal& animal);
 
     // Virtual Destructor
     virtual ~Animal();
@@ -44,8 +46,5 @@ public:
     void setAlive(bool alive);
 
     // Overloaded insertion operator
-    friend ostream& operator<<(ostream& os, const Animal& animal);
-
-
-
+    friend ostream& operator<<(ostream& os, const Animal& a);
 };

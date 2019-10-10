@@ -150,6 +150,33 @@ animal.cpp.s:
 	$(MAKE) -f CMakeFiles/Lab4.dir/build.make CMakeFiles/Lab4.dir/animal.cpp.s
 .PHONY : animal.cpp.s
 
+bird.o: bird.cpp.o
+
+.PHONY : bird.o
+
+# target to build an object file
+bird.cpp.o:
+	$(MAKE) -f CMakeFiles/Lab4.dir/build.make CMakeFiles/Lab4.dir/bird.cpp.o
+.PHONY : bird.cpp.o
+
+bird.i: bird.cpp.i
+
+.PHONY : bird.i
+
+# target to preprocess a source file
+bird.cpp.i:
+	$(MAKE) -f CMakeFiles/Lab4.dir/build.make CMakeFiles/Lab4.dir/bird.cpp.i
+.PHONY : bird.cpp.i
+
+bird.s: bird.cpp.s
+
+.PHONY : bird.s
+
+# target to generate assembly for a file
+bird.cpp.s:
+	$(MAKE) -f CMakeFiles/Lab4.dir/build.make CMakeFiles/Lab4.dir/bird.cpp.s
+.PHONY : bird.cpp.s
+
 inheritance.o: inheritance.cpp.o
 
 .PHONY : inheritance.o
@@ -189,6 +216,9 @@ help:
 	@echo "... animal.o"
 	@echo "... animal.i"
 	@echo "... animal.s"
+	@echo "... bird.o"
+	@echo "... bird.i"
+	@echo "... bird.s"
 	@echo "... inheritance.o"
 	@echo "... inheritance.i"
 	@echo "... inheritance.s"
