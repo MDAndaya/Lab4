@@ -80,7 +80,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/cygdrive/c/Users/MDand/CLionProjects/Lab4/main.cpp">
+		<Unit filename="/cygdrive/c/Users/MDand/CLionProjects/Lab4/animal.cpp">
+			<Option target="Lab4"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/MDand/CLionProjects/Lab4/animal.hpp">
+			<Option target="Lab4"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/MDand/CLionProjects/Lab4/inheritance.cpp">
 			<Option target="Lab4"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/MDand/CLionProjects/Lab4/CMakeLists.txt">
