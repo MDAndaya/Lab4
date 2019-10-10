@@ -7,18 +7,26 @@
 
 long Animal::idcounter = 1.0;
 Animal::Animal()
-: age(0), id(idcounter++), alive(true), locationx(0), locationy(0)  {}
+: age(0), id(idcounter++), alive(true), locationx(0), locationy(0)  {
+    cout << "animal constructed" << endl;
+}
 
 Animal::Animal(int age, double xcoord, double ycoord)
-: age(age), id(idcounter++), alive(true), locationx(xcoord), locationy(ycoord){}
+: age(age), id(idcounter++), alive(true), locationx(xcoord), locationy(ycoord){
+    cout << "animal constructed" << endl;
+}
 
 void Animal::move(double xcoord, double ycoord) {
     locationx = xcoord;
     locationy = ycoord;
+    cout << "animal moving" << endl;
+    cout << "moved to " << locationx << ", " << locationy << ", " << alt << endl;
 }
 
 Animal::Animal(const Animal& a)
-: age(a.age), id(a.id), alive(a.alive), locationx(a.locationx), locationy(a.locationy) {}
+: age(a.age), id(a.id), alive(a.alive), locationx(a.locationx), locationy(a.locationy) {
+    cout << "animal constructed" << endl;
+}
 
 Animal::~Animal() {
     cout << "Animal deleted" << endl;

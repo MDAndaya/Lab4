@@ -9,18 +9,25 @@
 #include <iostream>
 #include "bird.hpp"
 
-Bird::Bird(): Animal(0, 0, 0) {}
+Bird::Bird(): Animal(0, 0, 0) {
+    cout << "bird constructed" << endl;
+}
 
 Bird::Bird(int age, double xcoord, double ycoord, double alt)
-:Animal(age, xcoord, ycoord), alt(alt) {}
+:Animal(age, xcoord, ycoord), alt(alt) {
+    cout << "bird constructed" << endl;
+}
 
 void Bird::move(double xcoord, double ycoord, double alt) {
     Animal::move(xcoord, ycoord);
     this->alt = alt;
+    cout << "bird moving" << endl;
 }
 
 Bird::Bird(const Bird& a)
-:Animal(a), alt(alt) {}
+:Animal(a), alt(alt) {
+    cout << "bird constructed" << endl;
+}
 
 Bird::~Bird() {
     cout << "Bird deleted" << endl;

@@ -6,17 +6,24 @@
 #include <iostream>
 #include "canine.hpp"
 
-Canine::Canine(): Animal(0, 0, 0) {}
+Canine::Canine(): Animal(0, 0, 0) {
+    cout << "canine constructed" << endl;
+}
 
 Canine::Canine(int age, double xcoord, double ycoord)
-:Animal(age, xcoord, ycoord) {}
+:Animal(age, xcoord, ycoord) {
+    cout << "canine constructed" << endl;
+}
 
 void Canine::move(double xcoord, double ycoord) {
     Animal::move(xcoord, ycoord);
+    cout << "canine moving" << endl;
 }
 
 Canine::Canine(const Canine& a)
-        :Animal(a) {}
+        :Animal(a) {
+    cout << "canine constructed" << endl;
+}
 
 Canine::~Canine() {
     cout << "Canine deleted" << endl;
