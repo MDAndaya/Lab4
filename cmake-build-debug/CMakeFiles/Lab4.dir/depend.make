@@ -8,5 +8,9 @@ CMakeFiles/Lab4.dir/bird.cpp.o: ../animal.hpp
 CMakeFiles/Lab4.dir/bird.cpp.o: ../bird.cpp
 CMakeFiles/Lab4.dir/bird.cpp.o: ../bird.hpp
 
+CMakeFiles/Lab4.dir/canine.cpp.o: ../animal.hpp
+CMakeFiles/Lab4.dir/canine.cpp.o: ../canine.cpp
+CMakeFiles/Lab4.dir/canine.cpp.o: ../canine.hpp
+
 CMakeFiles/Lab4.dir/inheritance.cpp.o: ../inheritance.cpp
 

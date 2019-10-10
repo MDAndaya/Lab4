@@ -9,14 +9,13 @@
 #include <iostream>
 #include "bird.hpp"
 
-Bird::Bird(): Animal(0, 0, 0), alt(0) {}
+Bird::Bird(): Animal(0, 0, 0) {}
 
 Bird::Bird(int age, double xcoord, double ycoord, double alt)
 :Animal(age, xcoord, ycoord), alt(alt) {}
 
 void Bird::move(double xcoord, double ycoord, double alt) {
-    locationx = xcoord;
-    locationy = ycoord;
+    Animal::move(xcoord, ycoord);
     this->alt = alt;
 }
 
@@ -36,15 +35,17 @@ void Bird::eat() {
 }
 
 void Bird::setAlive(bool alive) {
-    this->alive = alive;
+    Animal::setAlive(alive);
 }
 
 ostream& operator<<(ostream& os, const Bird& a) {
-    cout << "Age: " << a.age << endl;
-    cout << "ID: " << a.id << endl;
-    cout << "Alive: " << a.alive << endl;
-    cout << "Location: " << a.locationx << ", " << a.locationy << ", " << a.alt << endl;
+    os << "Age: " << a.getAge() << endl;
+    os << "ID: " << a.getID() << endl;
+    os << "Alive: " << a.isAlive() << endl;
+    os << "Location: " << a.getLocationX() << ", " << a.getLocationY() << ", " << a.getAlt() << endl;
+    return os;
 }
 
-
-
+double Bird::getAlt() const {
+    return alt;
+}

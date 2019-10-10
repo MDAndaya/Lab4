@@ -17,15 +17,14 @@ private:
     int age;
     int long id;
 
-public:
-
     static long idcounter;
 
     bool alive;
     double locationx;
     double locationy;
-    double height = 0;
+    double alt = 0;
 
+public:
     // Constructors
     Animal();
     Animal(int age = 0, double xcoord = 0, double ycoord = 0);
@@ -47,4 +46,14 @@ public:
 
     // Overloaded insertion operator
     friend ostream& operator<<(ostream& os, const Animal& a);
+
+    int getAge() const;
+
+    long getID() const;
+
+    bool isAlive() const;
+
+    double getLocationX() const;
+
+    double getLocationY() const;
 };

@@ -5,7 +5,7 @@
 #include <iostream>
 #include "animal.hpp"
 
-long Animal::idcounter = 'A';
+long Animal::idcounter = 1.0;
 Animal::Animal()
 : age(0), id(idcounter++), alive(true), locationx(0), locationy(0)  {}
 
@@ -37,11 +37,33 @@ void Animal::setAlive(bool alive) {
 }
 
 ostream& operator<<(ostream& os, const Animal& a) {
-    cout << "Age: " << a.age << endl;
-    cout << "ID: " << a.id << endl;
-    cout << "Alive: " << a.alive << endl;
-    cout << "Location: " << a.locationx << ", " << a.locationy << endl;
+    os << "Age: " << a.getAge() << endl;
+    os << "ID: " << a.getID() << endl;
+    os << "Alive: " << a.isAlive() << endl;
+    os << "Location: " << a.getLocationX() << ", " << a.getLocationY() << endl;
+    return os;
 }
+
+int Animal::getAge() const {
+    return age;
+}
+
+long Animal::getID() const {
+    return id;
+}
+
+bool Animal::isAlive() const {
+    return alive;
+}
+
+double Animal::getLocationX() const {
+    return locationx;
+}
+
+double Animal::getLocationY() const {
+    return locationy;
+}
+
 
 
 

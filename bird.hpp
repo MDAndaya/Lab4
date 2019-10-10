@@ -15,17 +15,9 @@ using namespace std;
 class Bird: public Animal {
 
 private:
-    int age;
-    int long id;
+    double alt = 0;
 
 public:
-
-    static long idcounter;
-
-    bool alive;
-    double locationx;
-    double locationy;
-    double alt;
 
     // {}Constructors
     Bird();
@@ -48,4 +40,6 @@ public:
 
     // Overloaded insertion operator
     friend ostream& operator<<(ostream& os, const Bird& a);
+
+    double getAlt() const;
 };
