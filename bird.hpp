@@ -27,7 +27,7 @@ public:
     double locationy;
     double alt;
 
-    // Constructors
+    // {}Constructors
     Bird();
     Bird(int age = 0, double xcoord = 0, double ycoord = 0, double alt = 0);
 

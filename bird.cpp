@@ -9,31 +9,30 @@
 #include <iostream>
 #include "bird.hpp"
 
-long Bird::idcounter = 'A';
-Bird::Bird(): Animal()
-        : age(0), id(idcounter++), alive(true), locationx(0), locationy(0)  {}
+Bird::Bird(): Animal(0, 0, 0), alt(0) {}
 
-Bird::Bird(int age, double xcoord, double ycoord)
-        : age(age), id(idcounter++), alive(true), locationx(xcoord), locationy(ycoord){}
+Bird::Bird(int age, double xcoord, double ycoord, double alt)
+:Animal(age, xcoord, ycoord), alt(alt) {}
 
-void Bird::move(double xcoord, double ycoord) {
+void Bird::move(double xcoord, double ycoord, double alt) {
     locationx = xcoord;
     locationy = ycoord;
+    this->alt = alt;
 }
 
 Bird::Bird(const Bird& a)
-        : age(a.age), id(a.id), alive(a.alive), locationx(a.locationx), locationy(a.locationy) {}
+:Animal(a), alt(alt) {}
 
 Bird::~Bird() {
-    cout << "Animal deleted" << endl;
+    cout << "Bird deleted" << endl;
 }
 
 void Bird::sleep() {
-    cout << "Animal: zzzZZZzzzZZZzzzZZZ" << endl;
+    cout << "Bird: zzzZZZzzzZZZzzzZZZ chirp chirp" << endl;
 }
 
 void Bird::eat() {
-    cout << "Animal: nom nom nom" << endl;
+    cout << "Bird: nom nom nom kaka" << endl;
 }
 
 void Bird::setAlive(bool alive) {
@@ -44,7 +43,7 @@ ostream& operator<<(ostream& os, const Bird& a) {
     cout << "Age: " << a.age << endl;
     cout << "ID: " << a.id << endl;
     cout << "Alive: " << a.alive << endl;
-    cout << "Location: " << a.locationx << ", " << a.locationy << endl;
+    cout << "Location: " << a.locationx << ", " << a.locationy << ", " << a.alt << endl;
 }
 
 
